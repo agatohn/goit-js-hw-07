@@ -13,8 +13,8 @@ const images = [
   },
 ];
 const ulRef = document.querySelector('#gallery')
-const createMarkup = (images) => {
-  return images.map(
+const createMarkup = (array) => {
+  return array.map(
       ({ url, alt }) => `
   <li>
   <img src="${url}" alt="${alt}">
@@ -22,5 +22,5 @@ const createMarkup = (images) => {
     )
     .join('');
 }
-
- ulRef.innerHTML = createMarkup(images);
+const allLi = createMarkup(images);
+ ulRef.insertAdjacentHTML('beforeend', allLi);
