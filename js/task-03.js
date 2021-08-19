@@ -17,7 +17,7 @@ const createMarkup = (array) => {
   return array.map(
       ({ url, alt }) => `
   <li>
-  <img src="${url}" alt="${alt}">
+  <img src="${url}" alt="${alt}" width = "480">
   </li>`,
     )
     .join('');
